@@ -1,0 +1,242 @@
+// @mixin flex-property {
+//     display: flex;
+//     justify-content:flex-start;
+//     margin-left: 30px;
+// }
+
+// @mixin card-button-property {
+    
+//     background-color: white;
+//     cursor: pointer;
+//     border: none;
+//     font-weight: bold;
+// }
+
+// @mixin footer-button-property {
+//     background-color: white;
+//     color: black;
+//     cursor: pointer;
+//     font-size: 12px;
+//     border: none;
+// }
+
+// .registration-container{
+//     height: 100%;
+//     width: 100%;
+// }
+
+// .card{
+//     height: 567px;
+//     width: 750px;
+//     background-color: white;
+//     left: 280px;
+//     top: 30px;
+//     border: rgba(000, 0, 0, 0.2) solid 1px;
+//     border-radius: 10px;
+//     font-family: sans-serif;
+// }
+
+// .logo{
+//     @include flex-property();
+//     font-size: 20px;
+//     padding-top: 30px;
+//     margin-bottom: 15px;
+// }
+
+// .title{
+//     @include flex-property();
+//     font-size: 20px;
+//     margin-bottom: 20px;
+// }
+
+// .firstField{
+//     width: 160px;
+// }
+
+// .firstHint{
+//     margin-left: -10px;
+// }
+
+// .lastField{
+//     width: 160px;
+// }
+
+// .lastHint{
+//     margin-left: -10px;
+// }
+
+// .userName{
+//     width: 340px;
+// }
+
+// .userHint{
+//     margin-left: -10px;
+// }
+
+// .passField{
+//     width: 160px;
+// }
+
+// .name-content{
+//     @include flex-property();
+// }
+
+// .email-content{
+//     @include flex-property();
+//     flex-direction: column;
+// }
+
+// .password-content{
+//     @include flex-property();
+// }
+
+// .checkbox{
+//     @include flex-property();
+//     margin-top: 20px;
+//     margin-bottom: 75px;
+// }
+
+// .button1{
+//     margin-top: 16px;
+//     color: #1a73e8;
+//     font-size: 13px;
+//     margin-top: 2px;
+//     margin-bottom: 32px;
+//     margin-left: -6px;
+//    @include card-button-property();
+// }
+
+// .hint{
+//     margin-bottom: 1px;
+//     word-spacing: -1px;
+//     margin-top: 25px;
+// }
+
+// .button2{
+//     margin-bottom: 50px;
+//     color: #1a73e8;
+//     font-size: 13px;
+//     margin-left: -6px;
+//    @include card-button-property();
+// }
+
+// .new-account{
+//     margin-bottom: 50px;
+// }
+
+// .button3{
+//     color: #1a73e8;
+//     font-size: 13px;
+//     margin-left: 23px;
+//     @include card-button-property();
+// }
+
+
+// .button4{
+//     background-color: #1a73e8;
+//     color: white;
+//     margin: -62px 0 25px 165px;
+//     cursor: pointer;
+//     font-size: 15px;
+//     padding: 10px 24px 10px 24px;
+//     border: none;
+//     border-radius: 5px;
+//     font-weight: bold;
+// }
+
+// .footer-container{
+//     margin-top: 53px;
+//     margin-left: 450px;
+// }
+
+// .button5{
+//     @include footer-button-property();
+//     margin-left: -175px;
+// }
+
+// .button6{
+//     @include footer-button-property();
+//     margin-left: 465px;
+// }
+
+// .button7{
+//     @include footer-button-property();
+//     margin-left: 30px;
+// }
+
+// .button8{
+//     @include footer-button-property();
+//     margin-left: 20px
+// }
+
+// .image{
+//     margin-top: -500px;
+//     margin-left: 450px;
+// }
+
+// .img-text1{
+//     margin-left: 469px;
+//     font-size: 17px;
+// }
+
+// .img-text2{
+//     margin-left: 515px;
+//     font-size: 17px;
+// }
+
+// .validation-alert{
+//     color: red;
+// }
+
+
+.registration-container{
+    // height: 100%;
+    // width: 100%;
+    
+}
+
+
+.mat-card{
+    height: 85%;
+}
+
+.card{
+    top: 10%;
+    position: absolute;
+    border: 1px solid black;
+    
+}
+
+.button{
+    background-color: #1a73e8;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 10px 24px 10px 24px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    position: relative;
+    left: 39%;
+}
+
+.link{
+    color:#1a73e8;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight:bold ;
+}
+
+.column_2{
+    position: absolute;
+    top: 14%;
+    left: 65%;
+}
+
+.img-text1{
+    text-align: center;
+}
+
+.img-text2{
+    text-align: center;
+}

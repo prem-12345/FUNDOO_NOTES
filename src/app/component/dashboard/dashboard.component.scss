@@ -1,0 +1,165 @@
+
+.mat-toolbar{
+    background-color: white;
+    border: 1px solid rgb(133, 130, 130);
+
+    .section1 {
+    
+        mat-icon{
+            padding: 10px;
+            width: 30px;
+            color:black;
+            font-size: 26px;
+            cursor: pointer;
+            border-radius: 100%;
+            border: none;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            border: none;
+        }
+    
+        .icon-property{
+            border: none;
+            border-radius: 100%;
+            background-color: white;
+            padding:0px;
+        }
+    
+        .icon-property:hover{
+            background-color:#6f6f6f;;
+            opacity: 0.5;
+        }
+        
+        .icon-1{
+            position: relative;
+            height: 35px;
+            width: 35px;
+            cursor: pointer;
+            top: 5px;
+        }
+    
+        p{
+            position:relative;
+            top: 11px;
+            margin-bottom: 0px;
+            width: 100px;
+            text-align: center;
+            color: #6f6f6f;
+            font-size: 20px;
+            cursor: pointer;
+        }
+    }
+    
+    ::ng-deep .mat-form-field {
+        font-size: 13px; 
+        top: 9px;
+        width: 650px; 
+        
+    }
+    
+    .search-input{
+        font-size: 16px;
+        margin-left: 15px;
+    }
+    
+    .search-icon{
+        margin-left: 15px;
+        color: black;
+        font-size: 22px;
+    }
+    
+    button:hover{
+        background-color:#6f6f6f;
+        opacity: 0.5;
+    }
+    
+    .button-property{
+        border: none;
+        border-radius: 100%;
+        background-color: white;
+        padding:10px;
+        opacity: 0.5;
+    }
+
+    .btnPosition {
+        margin-top: 8px;
+        margin-left: 18px;
+        opacity: 0.6;
+        cursor : pointer;
+    }
+}
+
+
+
+.mat-sidenav-container{
+
+    top: 0%;
+    height: 90%;
+
+    .mat-sidenav{
+        background-color: white;
+        width: 280px;
+        border: none;
+    }
+    
+    button:hover{
+        background-color:#eeea0f;
+        opacity: 0.5;
+    }
+
+    .btnPosition {
+        margin-top: 8px;
+        margin-left: 18px;
+        opacity: 0.6;
+        cursor : pointer;
+    }
+
+    .button-property{
+        border: none;
+        border-radius: 100%;
+        background-color: white;
+        padding:10px;
+        opacity: 0.5;
+    }
+    
+    .navName {
+        margin-top: 20px;
+        font-size : 16px;
+        cursor : pointer;
+        width : 220px;
+        margin-left: 3px;
+    }
+    
+    .source-text{
+        margin-top: 305px;
+        margin-left: 20px;
+        color: black;
+        opacity: 0.5;
+        border: none;
+    }
+    
+    .centerIcon{
+        height: 110px;
+        width: 110px;
+        opacity: 0.5;
+    }
+    
+    .center-ref{
+        font-size: 25px;
+        opacity: 0.5;
+    }
+
+    .mat-sidenav-content{
+        background-color: white;
+    }
+
+
+
+}
+
+
+
+
+
+

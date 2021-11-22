@@ -1,0 +1,54 @@
+// .card{
+//     top: 10%;
+//     border: 1px solid black;
+//     position: absolute;
+//     width: 66%;
+// }
+
+// .text{
+//     font-size: 20px;
+// }
+
+// .button-icon{
+//     margin: 0px 10px;
+//     border: none;
+//     background-color: white;
+// }
+
+
+
+
+
+
+
+.card{
+    top: 10%;
+    border: 1px solid black;
+    position: absolute;
+    // width: 66%;
+    height: 150px;
+    // width: 700px;
+}
+
+.notes-field{
+    // width: 66%;
+    border: none;
+}
+
+.input-text{
+    // width: 80%;
+    border: none;
+    // background-color: yellow;
+    font-size: 25px;
+}
+
+.input-text-2{
+    position: absolute;
+    left: 4%;
+    font-size: 20px;
+    top: 44%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 351px;
+    border: 0;
+}

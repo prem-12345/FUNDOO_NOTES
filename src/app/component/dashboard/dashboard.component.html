@@ -1,0 +1,107 @@
+<div class="dashboard-container">
+    <mat-toolbar fxLayout="row">
+
+        <div fxLayout="row" fxFlex="22" class="section1">
+            <button mat-icon-button (click)="opened=!opened" class="icon-property">
+                <mat-icon class="icon">menu</mat-icon>
+            </button>
+            <img src="../../../assets/icon/keep-img.png" alt="" class="icon-1">
+            <p>Fundoo</p>
+        </div>
+
+        <div fxFlex="60%" class="search-bar">
+            <mat-form-field appearance="outline">
+                <input matInput type="search" placeholder="Search" class="search-input">
+                <mat-icon matPrefix class="search-icon">search</mat-icon>
+            </mat-form-field>
+        </div>
+
+        <div fxFlex="16%" fxLayout="row" fxLayoutAlign="center" fxLayoutGap="10px">
+            <button mat-icon-button class="button-property">
+                <mat-icon>refresh</mat-icon>
+            </button>
+            <button mat-icon-button class="button-property">
+                <mat-icon *ngIf="!openDash" (click)="openDashboard()">view_stream</mat-icon>
+                <mat-icon *ngIf="openDash" (click)="openDashboard()">dashboard</mat-icon>
+            </button>
+            <button mat-icon-button class="button-property">
+                <mat-icon>settings</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>
+                    <p>settings</p>
+                </button>
+                <button mat-menu-item>
+                    <p>Enable dark theam</p>
+                </button>
+                <button mat-menu-item>
+                    <p>Send feedback</p>
+                </button>
+                <button mat-menu-item>
+                    <p>Help</p>
+                    <p>keyboard shortcuts</p>
+                </button>
+            </mat-menu>
+        </div>
+
+        <div fxLayout="row" fxLayoutGap="10px">
+            <button mat-icon-button class="button-property">
+                <mat-icon>apps</mat-icon>
+            </button>
+            <button mat-icon-button class="button-property">
+                <mat-icon>account_circle</mat-icon>
+            </button>
+        </div>
+
+    </mat-toolbar>
+
+</div>
+
+
+<mat-sidenav-container>
+
+    <mat-sidenav #sidenav mode="side" [(opened)]="opened" fxLayout="column" fxLayoutAlign="start center"
+        fxLayoutGap="20px">
+
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+            <button mat-icon-button class="btnPosition button-property">
+                <img src="../../../assets/icon/lightbulb.svg" alt="">
+            </button>
+            <p class="navName">Notes</p>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+            <button mat-icon-button class="btnPosition button-property">
+                <img src="../../../assets/icon/download.svg" alt="">
+            </button>
+            <p class="navName">Reminders</p>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+            <button mat-icon-button class="btnPosition button-property">
+                <img src="../../../assets/icon/label.svg" alt="">
+            </button>
+            <p class="navName">Edit labels</p>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+            <button mat-icon-button class="btnPosition button-property">
+                <img src="../../../assets/icon/archive.svg" alt="">
+            </button>
+            <p class="navName">Archive</p>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+            <button mat-icon-button class="btnPosition button-property">
+                <img src="../../../assets/icon/delete.svg" alt="">
+            </button>
+            <p class="navName">Trash</p>
+        </div>
+          <button class="source-text">Open-source licenses</button>
+    </mat-sidenav>
+
+    <mat-sidenav-content fxLayout="column" fxFlex=100 fxLayoutAlign="center center" fxLayoutGap="30px">
+        <img src="../../../assets/icon/centerIcon.svg" alt="" class="centerIcon">
+        <p class="center-ref">Notes you add appear here</p>
+    </mat-sidenav-content>
+</mat-sidenav-container>

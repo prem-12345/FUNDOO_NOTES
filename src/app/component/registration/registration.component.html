@@ -1,0 +1,223 @@
+<!-- <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+    <div class="registration-container">
+        <mat-card class="card">
+            <div class="logo">
+                <p style="color: #1a73e8;">F</p>
+                <p style="color: #ea4335;">u</p>
+                <p style="color: #fbbc05;">n</p>
+                <p style="color: #1a73e8;">d</p>
+                <p style="color: #34a853;">o</p>
+                <p style="color: #ea4335;">o</p>
+            </div>
+            <mat-card-title class="title">Create Your Fundoo Account</mat-card-title>
+            <div class="name-content" fxLayoutGap=20px>
+                <mat-form-field appearance="outline" class="firstField">
+                    <mat-label>First Name</mat-label>
+                    <input matInput placeholder="First Name" formControlName="firstName" type="text" name="firstName">
+                    <mat-hint class="firstHint" *ngIf="submitted && f.firstName.errors">
+                        <mat-hint *ngIf="f.firstName.errors.required" class="validation-alert">Enter valid first name </mat-hint>
+                    </mat-hint>
+                </mat-form-field>
+                <mat-form-field appearance="outline" class="lastField">
+                    <mat-label>Last Name</mat-label>
+                    <input matInput placeholder="Last Name" formControlName="lastName"  type="text" name="lastName">
+                    <mat-hint  class="lastHint" *ngIf="submitted && f.lastName.errors">
+                        <mat-hint *ngIf="f.lastName.errors.required" class="validation-alert">Enter valid last name</mat-hint>
+                    </mat-hint>
+                </mat-form-field>
+            </div>
+            <mat-card-content>
+                <div class="email-content">
+                    <mat-form-field appearance="outline" class="userName">
+                        <mat-label>Username</mat-label>
+                        <input matInput placeholder="Username" formControlName="email" type="email" name="email">
+                        <mat-icon matSuffix>@gmail.com</mat-icon>
+                        <mat-hint class="userHint" *ngIf="submitted && f.email.errors">
+                            <mat-hint *ngIf="f.email.errors.required" class="validation-alert">You can use letters,numbers & periods</mat-hint>
+                        </mat-hint>
+                    </mat-form-field>
+                    <div routerLink="/forgot-email">
+                        <button class="button1">Use my current email address instead</button>
+                    </div>
+                </div>
+                <div class="password-content" fxLayoutGap=20px>
+                    <mat-form-field appearance="outline" class="passField">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="Password" formControlName="password" type="password" name="password"  id="password" matInput [type]="hide?'password':'text'">
+                        <mat-hint *ngIf="submitted && f.password.errors">
+                            <mat-hint *ngIf="f.password.errors.required" class="validation-alert">Password is required</mat-hint>
+                            <mat-hint *ngIf="f.password.errors.minlength" class="validation-alert">Password required 6 chara
+                            </mat-hint>
+                        </mat-hint>
+                    </mat-form-field>
+                    <mat-form-field appearance="outline" class="passField">
+                        <mat-label>Confirm Password</mat-label>
+                        <input matInput placeholder="Confirm Password" formControlName="confirmPassword" type="password" name="confirmPassword" matInput [type]="hide?'password':'text'">
+                        <mat-hint *ngIf="submitted && f.confirmPassword.errors">
+                            <mat-hint *ngIf="f.confirmPassword.errors.required" class="validation-alert">Confirm Password required</mat-hint>
+                            <mat-hint *ngIf="f.confirmPassword.errors.MustMatch" class="validation-alert">Wrong Password
+                            </mat-hint>
+                        </mat-hint>
+                    </mat-form-field>
+                </div>
+                <div style=" margin-top: -3px; font-size: 11px; margin-left: 32px; opacity: 0.7;
+                font-weight: 100; font-family: inherit;">Use 8 or more characters with a mix of letters, numbers & symbols</div>
+                <div class="checkbox">
+                    <input type="checkbox" (click)="showPassword()"/>
+                    <label for="checkbox" >Show password</label> 
+                </div>
+                <div class="new-account">
+                    <button class="button3" routerLink="/login">Sign in instead</button>
+                    <button class="button4">Next</button>
+                </div>
+            </mat-card-content>
+            <div class="image">
+                <img src="../../../assets/account.svg" alt="" style="width: 250px; height: 250px;">
+            </div>
+            <div class="img-text1">One account. All of Google</div>
+            <div class="img-text2">working for you.</div>
+        </mat-card>
+        <div class="footer-container">
+            <button class="button5">English(United Kingdom)</button>
+            <button class="button6">Help</button>
+            <button class="button7">Privacy</button>
+            <button class="button8">Terms</button>
+        </div>
+
+    </div>
+
+</form> -->
+
+
+
+
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+
+    <div class="registration-container" fxLayoutAlign="center center">
+
+        <mat-card class="card" fxFlexFill fxFlex="50%">
+
+            <div fxLayout="column" fxLayoutGap=10px>
+                <div class="logo" fxLayout="row">
+                    <p style="color: #1a73e8;">F</p>
+                    <p style="color: #ea4335;">u</p>
+                    <p style="color: #fbbc05;">n</p>
+                    <p style="color: #1a73e8;">d</p>
+                    <p style="color: #34a853;">o</p>
+                    <p style="color: #ea4335;">o</p>
+                </div>
+                <mat-card-title class="title">Create Your Fundoo Account</mat-card-title>
+
+                <div class="name-content" fxLayoutGap="20px">
+
+                    <mat-form-field appearance="outline" class="firstField">
+                        <mat-label>First Name</mat-label>
+                        <input matInput placeholder="First Name" formControlName="firstName" type="text"
+                            name="firstName">
+                        <mat-hint class="firstHint" *ngIf="submitted && f.firstName.errors">
+                            <mat-hint *ngIf="f.firstName.errors.required" class="validation-alert">Enter valid first
+                                name </mat-hint>
+                        </mat-hint>
+                    </mat-form-field>
+
+
+                    <mat-form-field appearance="outline" class="lastField">
+                        <mat-label>Last Name</mat-label>
+                        <input matInput placeholder="Last Name" formControlName="lastName" type="text" name="lastName">
+                        <mat-hint class="lastHint" *ngIf="submitted && f.lastName.errors">
+                            <mat-hint *ngIf="f.lastName.errors.required" class="validation-alert">Enter valid last name
+                            </mat-hint>
+                        </mat-hint>
+                    </mat-form-field>
+                </div>
+
+
+                <div class="email-content">
+
+                    <mat-form-field appearance="outline" class="userName" fxFlex=66%>
+                        <mat-label>Username</mat-label>
+                        <input matInput placeholder="Username" formControlName="email" type="email" name="email">
+                        <!-- <mat-icon matSuffix>@gmail.com</mat-icon> -->
+                        <mat-hint class="userHint" *ngIf="submitted && f.email.errors">
+                            <mat-hint *ngIf="f.email.errors.required" class="validation-alert">You can use
+                                letters,numbers & periods</mat-hint>
+                        </mat-hint>
+                    </mat-form-field>
+
+                </div>
+
+                <div routerLink="/forgot-email">
+                    <a class="link">Use my current email address instead</a>
+
+                </div>
+
+
+                <div class="password-content" fxLayoutGap="20px">
+
+                    <mat-form-field appearance="outline" class="passField">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="Password" formControlName="password" type="password"
+                            name="password" id="password" matInput [type]="hide?'password':'text'">
+                        <mat-hint *ngIf="submitted && f.password.errors">
+                            <mat-hint *ngIf="f.password.errors.required" class="validation-alert">Password is required
+                            </mat-hint>
+                            <mat-hint *ngIf="f.password.errors.minlength" class="validation-alert">Password required 6
+                                chara
+                            </mat-hint>
+                        </mat-hint>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="outline" class="passField">
+                        <mat-label>Confirm Password</mat-label>
+                        <input matInput placeholder="Confirm Password" formControlName="confirmPassword" type="password"
+                            name="confirmPassword" matInput [type]="hide?'password':'text'">
+                        <mat-hint *ngIf="submitted && f.confirmPassword.errors">
+                            <mat-hint *ngIf="f.confirmPassword.errors.required" class="validation-alert">Confirm
+                                Password required</mat-hint>
+                            <mat-hint *ngIf="f.confirmPassword.errors.MustMatch" class="validation-alert">Wrong Password
+                            </mat-hint>
+                        </mat-hint>
+                    </mat-form-field>
+
+                </div>
+
+            </div>
+
+
+
+            <div fxLayout="column" fxLayoutGap="50px">
+
+                <div class="link">Use 8 or more characters with a mix of letters, numbers & symbols</div>
+
+                <div class="checkbox">
+                    <input type="checkbox" (click)="showPassword()" />
+                    <label for="checkbox">Show password</label>
+                </div>
+
+                <div class="new-account">
+
+                    <a class="link" routerLink="/login">Sign in instead</a>
+                    <button class="button">Next</button>
+
+                </div>
+            </div>
+
+            <div fxLayout="column" class="column_2">
+                <div class="image">
+                    <img src="../../../assets/account.svg" alt="" style="width: 250px; height: 250px;">
+                </div>
+                <div class="img-text1">One account. All of Google</div>
+                <div class="img-text2">working for you.</div>
+            </div>
+
+        </mat-card>
+        <!-- <div class="footer-container">
+            <button class="button5">English(United Kingdom)</button>
+            <button class="button6">Help</button>
+            <button class="button7">Privacy</button>
+            <button class="button8">Terms</button>
+        </div> -->
+
+    </div>
+
+</form>

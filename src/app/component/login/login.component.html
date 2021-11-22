@@ -1,0 +1,58 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <div class="login-container">
+        <mat-card class="card">
+            <div class="logo">
+                <p style="color: #1a73e8;">F</p>
+                <p style="color: #ea4335;">u</p>
+                <p style="color: #fbbc05;">n</p>
+                <p style="color: #1a73e8;">d</p>
+                <p style="color: #34a853;">o</p>
+                <p style="color: #ea4335;">o</p>
+            </div>
+            <mat-card-title class="title">Sign in</mat-card-title>
+            <mat-card-subtitle class="subtitle">Use your Fundoo Account</mat-card-subtitle>
+            <div class="email-content">
+                <mat-card-content>
+                    <mat-form-field appearance="outline" style="width: 340px;">
+                        <mat-label>Email or phone</mat-label>
+                        <input matInput placeholder="email" formControlName="email" type="email" name="email">
+                        <mat-hint style="margin-left: -10px;" *ngIf="submitted && f.email.errors">
+                            <mat-hint *ngIf="f.email.errors.required" class="validation-alert">Enter valid email address</mat-hint>
+                        </mat-hint>
+                    </mat-form-field>
+                    <div routerLink="/forgot-email">
+                        <button class="button1">Forgot Email?</button>
+                     </div>
+                    <mat-form-field appearance="outline" style="width: 340px;">
+                        <mat-label>Password</mat-label>
+                        <input matInput placeholder="password" formControlName="password" type="password" name="password">
+                        <mat-hint *ngIf="submitted && f.password.errors" style="margin-left: -10px;">
+                            <mat-hint *ngIf="f.password.errors.required" class="validation-alert">Password is required</mat-hint>
+                            <mat-hint *ngIf="f.password.errors.minlength" class="validation-alert">Password required 6 characters
+                            </mat-hint>
+                        </mat-hint>
+                    </mat-form-field>
+                    <div routerLink="/forgot-password">
+                        <button class="button9">Forgot Password?</button>
+                     </div>
+                    <div class="hint">
+                        <mat-hint>Not your computer? Use Guest mode to sign in privately.</mat-hint>
+                    </div>
+                    <button class="button2">Learn more</button>
+                    <div class="new-account">
+                        <button class="button3" routerLink="/registration">Create Account</button>
+                        <button class="button4">Next</button>
+                    </div>
+                </mat-card-content>
+            </div>
+        </mat-card>
+        <div class="footer-container">
+            <button class="button5">English(United Kingdom)</button>
+            <button class="button6">Help</button>
+            <button class="button7">Privacy</button>
+            <button class="button8">Terms</button>
+        </div>
+    </div>
+
+</form>
+
