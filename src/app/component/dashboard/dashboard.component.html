@@ -10,7 +10,7 @@
         </div>
 
         <div fxFlex="60%" class="search-bar">
-            <mat-form-field appearance="outline">
+            <mat-form-field appearance="outline" class="update">
                 <input matInput type="search" placeholder="Search" class="search-input">
                 <mat-icon matPrefix class="search-icon">search</mat-icon>
             </mat-form-field>
@@ -103,5 +103,8 @@
     <mat-sidenav-content fxLayout="column" fxFlex=100 fxLayoutAlign="center center" fxLayoutGap="30px">
         <img src="../../../assets/icon/centerIcon.svg" alt="" class="centerIcon">
         <p class="center-ref">Notes you add appear here</p>
+        <app-take-notes></app-take-notes>
+        
     </mat-sidenav-content>
+    
 </mat-sidenav-container>

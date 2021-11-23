@@ -1,0 +1,34 @@
+
+// .icons-container{
+//     position: relative;
+//     top: 32%;
+//     left: -1%;
+// }
+
+
+.btn-property{
+    border: none;
+    border-radius: 100%;
+    background-color: white;
+    padding:10px;
+    opacity: 0.5;
+}
+
+button:hover{
+    background-color:#6f6f6f;
+    opacity: 0.5;
+}
+
+
+.close-button{
+    position: relative;
+    top: 25%;
+    border: none;
+    background-color: white;
+    margin-left: 75px;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 3px;
+}
