@@ -23,6 +23,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
 import { TakeNotesComponent } from './component/take-notes/take-notes.component';
+// import { RoutesService } from './services/routerServices/routes.service';
 import { IconsComponent } from './component/icons/icons.component';
 
 
@@ -59,7 +60,9 @@ import { IconsComponent } from './component/icons/icons.component';
   
 
   ],
-  providers: [],
+  providers: [
+    // RoutesService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

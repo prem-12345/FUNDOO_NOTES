@@ -1,118 +1,74 @@
-// .card{
-//     top: 5%;
-//     border: 1px solid black;
-//     position: absolute;
-//     width: 66%;
-//     height: 45px;
-//     left: 31%;
-// }
-
-// .text{
-//     font-size: 15px;
-// }
-
-// .button-icon{
-//     margin: 0px 10px;
-//     border: none;
-//     background-color: white;
-// }
-
-// .card1{
-//     width: 66%;
-//     top: 5%;
-//     border: 1px solid black;
-//     position: absolute;
-//     height: 130px;
-//     left: 31%;
-// }
-
-// .notes-field{
-//     border: none;
-// }
-
-// .input-text{
-//     border: none;
-//     font-size: 20px;
-//     width: 446px;
-//     position: relative;
-//     margin-left: -6px;
-// }
-
-// .input-text-2{
-//     position: absolute;
-//     left: 6%;
-//     font-size: 15px;
-//     top: 36%;
-//     padding-top: 10px;
-//     padding-bottom: 10px;
-//     width: 351px;
-//     border: none;
-    
-// }
-
-
-
-
-.mat_card_1 {
-    top: 10%;
+.card{
+    top: 6%;
     border: 1px solid black;
     position: absolute;
     width: 44%;
+    height: 44px;
     left: 31%;
 }
-// .mat-card{
-//     max-width: 55%;
-// }
 
-.text {
-    font-size: 20px;
+.text{
+    font-size: 15px;
 }
 
-.button-icon {
+.button-icon{
     margin: 0px 10px;
     border: none;
     background-color: white;
 }
 
-.content_1 {
-    top: 10%;
-    border: 1px solid black;
-    position: absolute;
-    // width: 100%;
-    left: 31%;
-    height: 150px;
-}
-.input_field_1 {
-    padding: 2px 2px;
-    /* padding-bottom: 10px; */
-    font-size: 15px;
-    margin-bottom: 15px;
-    border: none;
-    outline: none;
-    // border-bottom: 1px solid black;
-    width: 92%;
-}
-.mat_card_2 {
-    top: 10%;
+.card1{
+    top: 6%;
     border: 1px solid black;
     position: absolute;
     width: 44%;
     left: 31%;
 }
-.note_pin {
-    /* margin: -4px 10px; */
+
+.input-text{
+    padding: 2px 2px;
+    font-size: 15px;
+    margin-bottom: 15px;
+    border: none;
+    outline: none;
+    width: 92%;
+}
+
+.input-text-2{
+    padding: 2px 2px;
+    font-size: 15px;
+    margin-bottom: 15px;
+    border: none;
+    outline: none;
+    width: 92%;
+}
+
+.pin{
     border: none;
     background-color: white;
     position: absolute;
-    top: 4px;
-    right: 0px;
+    top: 16px;
+    right: 10px;
 }
+
 .button{
-    top: 25%;
+    top: 21%;
     position: absolute;
-    //  background-color: red;
-    right: 27%;
+    right: 26%;
     background: none;
     border: none;
     font-size: 15px;
 }
+    
+
+
+
+
+
+
+
+
+
+
+
+
