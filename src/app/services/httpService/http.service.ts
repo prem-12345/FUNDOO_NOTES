@@ -15,4 +15,12 @@ export class HttpService {
     return this.httpClient.post(this.BaseUrl + url, reqPayLoad, token && httpOptions)
   }
 
+  Getservice(url = '', token: boolean = false, httpOptions: any = {}) {
+    console.log('Data in http service');
+    return this.httpClient.get(this.BaseUrl + url,token && httpOptions)
+  }
+
+  
+
+
 }
