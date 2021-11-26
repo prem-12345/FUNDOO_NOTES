@@ -19,11 +19,99 @@ export class NotesService {
     let options = {
       headers: new HttpHeaders({
         'Content-type': 'application/json',
-        'Authorization':this.token,
+        'Authorization':this.token
       })
     }
     return this.httpService.postService('notes/addNotes', reqPayLoad, true, options);
   }
+
+
+  GetallNotes() {
+    this.token = localStorage.getItem('token');
+    console.log("Data is in notes service");
+
+    let options = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': this.token
+      })
+    }
+    return this.httpService.Getservice('/notes/getNotesList',true ,options);
+  }
+
+  moveToTrash(reqPayload: any) {
+    console.log("in trashnoteservice", reqPayload);
+    let httpOptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': this.token
+      })
+
+    }
+    return this.httpService.postService('/notes/trashNotes', reqPayload, true, httpOptions)
+  }
+
+  getTrashList(){
+    console.log("Data is in notes service");
+    let options = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': this.token
+      })
+    }
+    return this.httpService.Getservice('/notes/getTrashNotesList', true, options )
+  }
+
+
+  archivedservice(reqPayload: any) {
+    console.log("in trashnoteservice", reqPayload);
+
+    let httpOptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': this.token
+      })
+
+    }
+    return this.httpService.postService('notes/archiveNotes', reqPayload, true, httpOptions)
+  }
+
+  getarchiveservice() {
+    let httpOptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': this.token
+      })
+
+    }
+    return this.httpService.Getservice('notes/getArchiveNotesList', true, httpOptions)
+  }
+  
+
+  updatenoteservice(reqPayload:any){
+  
+    let httpOptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': this.token
+      })
+  
+    }
+    return this.httpService.postService('notes/updateNotes', reqPayload,true, httpOptions)
+  }
+
+  deleteNoteForever(reqPayload: any) {
+    console.log("in note service", reqPayload);
+    let httpOptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': this.token
+      })
+
+    }
+    return this.httpService.postService('/notes/deleteForeverNotes', reqPayload, true, httpOptions)
+  }
+
 
 }
 
