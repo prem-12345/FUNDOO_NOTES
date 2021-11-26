@@ -11,3 +11,8 @@ button:hover{
     background-color:#6f6f6f;
     opacity: 0.5;
 }
+
+::ng-deep .mat-menu-item {
+    line-height: 0px ;
+    height     : 32px ;
+}
