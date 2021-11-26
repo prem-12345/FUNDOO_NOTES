@@ -1,0 +1,19 @@
+<div class="update-container">
+    <div>
+        <button class="pin">
+            <img src="../../../assets/icon/pin.svg" alt="">
+        </button>
+    </div>
+    <div fxLayout="column" fxLayoutGap="30px">
+        <div>
+            <input [(ngModel)]="title" class="title" type="text" placeholder="Title">
+        </div>
+        <div>
+            <input [(ngModel)]="description" class="description" type="text" placeholder="Description">
+        </div>
+       <div>
+        <app-icons class="icon"></app-icons>
+       </div>
+    </div>
+    <button  mat-dialog-close class="close" (click)="onUpdate()">close</button>
+</div>

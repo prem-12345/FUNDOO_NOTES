@@ -1,0 +1,36 @@
+
+.pin {
+    border: none;
+    background-color: white;
+    position: absolute;
+    outline: none;
+    left: 59%;
+    width: 40px;
+}
+
+.title{
+   border: none;
+   outline: none;
+   font-size: 20px;
+}
+
+.description{
+    border: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.icon{
+    position: relative;
+    right: 4px;
+    top: 22px;
+}
+
+.close{
+    position: relative;
+    left: 87%;
+    top: -7px;
+    background-color: white;
+    border: none;
+    font-size: 15px;
+}
