@@ -1,0 +1,41 @@
+
+.display-container{
+    left:5px;
+    position: relative;
+    display: flex;
+    flex-wrap:wrap;
+    gap:15px;
+    flex-direction: row;
+    justify-content: start; 
+}
+
+.pin {
+    top: 14px;
+    right: 0px;
+    border: none;
+    background-color: white;
+    position: absolute;
+   
+}
+
+.card{
+    min-width: 100px;
+    min-height: 100px;
+    height: fit-content;
+    max-width: 300px;
+    margin-bottom: 10px;
+    width: 250px;
+    flex-grow: 1;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.title{
+    margin-left: -3px;
+    word-wrap: break-word;
+}
+
+.description{
+    text-align: left;
+    padding: 12px;
+    word-wrap: break-word;
+}

@@ -1,0 +1,22 @@
+<div class="display-container">
+
+    <div fxLayout="row wrap" fxLayoutGap="10px grid">
+       <div *ngFor="let note of allNotes" fxFlex="300px">
+           <mat-card class="card">
+               <div> 
+                   <button class="pin">
+                    <img src="../../../assets/icon/pin.svg" alt="">
+                   </button>
+               </div>
+               <mat-card-header>
+                   <mat-card-title (click)="openDialog(note)" class="title">{{note.title}}</mat-card-title>
+               </mat-card-header>
+               <mat-card-content (click)="openDialog(note)" class="description">{{note.description}}</mat-card-content>
+               <div>
+                   <app-icons [noteCard]= "note" (iconToDisplay)="receiveMessageFromIcon($event)"></app-icons>
+               </div>            
+           </mat-card>
+       </div>
+    </div>
+</div>
+
