@@ -1,0 +1,3 @@
+
+<app-take-notes (messageEvent)="receiveMessage($event)"></app-take-notes>
+<app-display-notes [allNotes]="notesArray" (displaytogetallnotes)="receiveMessagefromdisplaycard($event)"></app-display-notes>
