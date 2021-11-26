@@ -5,19 +5,33 @@ import { ResetPasswordComponent } from './component/reset-password/reset-passwor
 import { LoginComponent } from './component/login/login.component';
 import { RegistrationComponent } from './component/registration/registration.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
-import { TakeNotesComponent } from './component/take-notes/take-notes.component';
-import { IconsComponent } from './component/icons/icons.component';
+import { GetNotesComponent } from './component/get-notes/get-notes.component';
+import { AuthenticationGuard } from './services/authguardService/authentication.guard'
+import { UpdateNoteComponent } from './component/update-note/update-note.component';
+import { TrashNoteComponent } from './component/trash-note/trash-note.component';
+import { ArchiveNotesComponent } from './component/archive-notes/archive-notes.component';
+
+
 
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'registration', component: RegistrationComponent },
-  { path: 'resetpassword/:token', component: ResetPasswordComponent},
-  { path: 'dashboard', component: DashboardComponent},
-  { path: 'take-notes' , component: TakeNotesComponent},
-  { path: 'icons' , component: IconsComponent}
-  
+  { path: 'resetpassword/:token', component: ResetPasswordComponent },
+
+  {
+    path: 'dashboard', component: DashboardComponent, canActivate: [AuthenticationGuard],
+    children: [
+      { path: '', redirectTo: 'get-notes', pathMatch: 'full' },
+      { path: "get-notes", component: GetNotesComponent },
+      { path: 'trash-note', component: TrashNoteComponent },
+      { path: 'archive-notes', component: ArchiveNotesComponent }
+    ]
+  },
+
+  // { path: 'update-note', component: UpdateNoteComponent }
+
 ];
 
 @NgModule({
