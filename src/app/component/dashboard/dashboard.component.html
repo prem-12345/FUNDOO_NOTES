@@ -49,7 +49,7 @@
                 <mat-icon>apps</mat-icon>
             </button>
             <button mat-icon-button class="button-property">
-                <mat-icon>account_circle</mat-icon>
+                <mat-icon (click)="logOut()">account_circle</mat-icon>
             </button>
         </div>
 
@@ -63,48 +63,45 @@
     <mat-sidenav #sidenav mode="side" [(opened)]="opened" fxLayout="column" fxLayoutAlign="start center"
         fxLayoutGap="20px">
 
-        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
-            <button mat-icon-button class="btnPosition button-property">
-                <img src="../../../assets/icon/lightbulb.svg" alt="">
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px" class="navHover">
+            <button mat-icon-button class="btnPosition button-property ">
+                <img src="../../../assets/icon/lightbulb.svg" alt="" routerLink='/dashboard/get-notes'>
             </button>
-            <p class="navName">Notes</p>
+            <p class="navName" routerLink='/dashboard/get-notes'>Notes</p>
         </div>
 
-        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px" class="navHover">
             <button mat-icon-button class="btnPosition button-property">
                 <img src="../../../assets/icon/download.svg" alt="">
             </button>
             <p class="navName">Reminders</p>
         </div>
 
-        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px" class="navHover">
             <button mat-icon-button class="btnPosition button-property">
                 <img src="../../../assets/icon/label.svg" alt="">
             </button>
             <p class="navName">Edit labels</p>
         </div>
 
-        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
-            <button mat-icon-button class="btnPosition button-property">
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px" class="navHover">
+            <button mat-icon-button class="btnPosition button-property" routerLink='/dashboard/archive-notes'>
                 <img src="../../../assets/icon/archive.svg" alt="">
             </button>
-            <p class="navName">Archive</p>
+            <p class="navName" routerLink='/dashboard/archive-notes'>Archive</p>
         </div>
 
-        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px">
-            <button mat-icon-button class="btnPosition button-property">
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px" class="navHover">
+            <button mat-icon-button class="btnPosition button-property" routerLink='/dashboard/trash-note'>
                 <img src="../../../assets/icon/delete.svg" alt="">
             </button>
-            <p class="navName">Trash</p>
+            <p class="navName" routerLink='/dashboard/trash-note'>Trash</p>
         </div>
           <button class="source-text">Open-source licenses</button>
     </mat-sidenav>
 
     <mat-sidenav-content fxLayout="column" fxFlex=100 fxLayoutAlign="center center" fxLayoutGap="30px">
-        <img src="../../../assets/icon/centerIcon.svg" alt="" class="centerIcon">
-        <p class="center-ref">Notes you add appear here</p>
-        <app-take-notes></app-take-notes>
-        
+        <router-outlet></router-outlet>
     </mat-sidenav-content>
     
 </mat-sidenav-container>
