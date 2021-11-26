@@ -17,15 +17,21 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
 import { ResetPasswordComponent } from './component/reset-password/reset-password.component';
 import { DashboardComponent } from './component/dashboard/dashboard.component';
-import {MatToolbarModule} from '@angular/material/toolbar';
-import {MatIconModule} from '@angular/material/icon';
-import {MatMenuModule} from '@angular/material/menu';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatListModule} from '@angular/material/list';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 import { TakeNotesComponent } from './component/take-notes/take-notes.component';
-// import { RoutesService } from './services/routerServices/routes.service';
+import { RoutesService } from './services/routerServices/routes.service';
 import { IconsComponent } from './component/icons/icons.component';
-
+import { DisplayNotesComponent } from './component/display-notes/display-notes.component';
+import { GetNotesComponent } from './component/get-notes/get-notes.component';
+import { AuthguardServiceService } from './services/authguardService/authguard-service.service';
+import { UpdateNoteComponent } from './component/update-note/update-note.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { TrashNoteComponent } from './component/trash-note/trash-note.component';
+import { ArchiveNotesComponent } from './component/archive-notes/archive-notes.component';
 
 
 @NgModule({
@@ -37,7 +43,12 @@ import { IconsComponent } from './component/icons/icons.component';
     ResetPasswordComponent,
     DashboardComponent,
     TakeNotesComponent,
-    IconsComponent
+    IconsComponent,
+    DisplayNotesComponent,
+    GetNotesComponent,
+    UpdateNoteComponent,
+    TrashNoteComponent,
+    ArchiveNotesComponent
   ],
   imports: [
     BrowserModule,
@@ -57,11 +68,12 @@ import { IconsComponent } from './component/icons/icons.component';
     MatMenuModule,
     MatSidenavModule,
     MatListModule,
-  
+    MatDialogModule
 
   ],
   providers: [
-    // RoutesService
+    RoutesService,
+    AuthguardServiceService
   ],
   bootstrap: [AppComponent]
 })
