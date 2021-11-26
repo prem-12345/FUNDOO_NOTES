@@ -155,7 +155,17 @@
         background-color: white;
     }
 
+    .navHover:hover{
+        background-color: #feefc3;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
 
+    .navHover:active{
+        background-color: #feefc3;
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+    }
 
 }
 
