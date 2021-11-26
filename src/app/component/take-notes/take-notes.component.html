@@ -20,14 +20,14 @@
 <div *ngIf="displayNoteCard">
     <mat-card class="card1" fxFlex="100%">
         <div fxLayout="row" fxLayoutAlign="space-between center">
-            <input type="text" placeholder="Title" class="input-text">
+            <input type="text" placeholder="Title" class="input-text" [(ngModel)]="title">
         </div>
         <div>
             <button class="pin">
                 <img src="../../../assets/icon/pin.svg" alt="">
             </button>
         </div>
-            <input type="text" placeholder="Take a note..." class="input-text-2" fxLayout="row">
+            <input type="text" placeholder="Take a note..." class="input-text-2" fxLayout="row" [(ngModel)]="description">
             <app-icons></app-icons>
     </mat-card>
     <button (click)="closeNote()" class="button">Close</button>
