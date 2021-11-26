@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { UserService } from 'src/app/services/userService/user.service';
-// import { Router } from '@angular/router';
+import { Router } from '@angular/router';
+import { AuthguardServiceService } from 'src/app/services/authguardService/authguard-service.service';
 
 @Component({
   selector: 'app-login',
@@ -14,9 +15,15 @@ export class LoginComponent implements OnInit {
   loginForm !: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder, private _snackBar: MatSnackBar, private userService: UserService ) { }
+  constructor(private formBuilder: FormBuilder, private _snackBar: MatSnackBar, private userService: UserService, private router: Router, private authguardServiceService: AuthguardServiceService ) { }
 
   ngOnInit() {
+
+    if(this.authguardServiceService.gettoken()){
+      this.router.navigate(['dashboard/get-notes'])
+    }
+
+
     this.loginForm = this.formBuilder.group({
 
       email: ['', [Validators.required, Validators.email]],
@@ -44,7 +51,7 @@ export class LoginComponent implements OnInit {
         console.log(response)
         localStorage.setItem('token',response.id)
 
-        // this.router.navigateByUrl('/dashboard')
+        this.router.navigate(['dashboard/get-notes'])
 
         this._snackBar.open('Login Successful', '', {
           duration: 2000,
