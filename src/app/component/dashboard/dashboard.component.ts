@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { AuthguardServiceService } from 'src/app/services/authguardService/authguard-service.service';
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -11,13 +11,17 @@ export class DashboardComponent implements OnInit {
   openDash:boolean = false;
  
 
-  constructor() { }
+  constructor(private authguardServiceService: AuthguardServiceService) { }
 
   ngOnInit(): void {
   }
 
   openDashboard(){
     this.openDash =  !this.openDash;
+  }
+
+  logOut(){
+    this.authguardServiceService.logOut();
   }
 
 }
