@@ -4,43 +4,72 @@
     <div class="icons" fxLayout="row" fxLayoutGap="15px" *ngIf="!isTrashComponent">
 
         <div class="buttons">
-            <button class="btn-property">
+            <button class="btn-property" matTooltip="Remind me" [matMenuTriggerFor]="menu">
                 <img src="../../../assets/icon/bellicon.svg" alt="">
             </button>
+            <mat-menu #menu="matMenu">
+                <button mat-menu-item>Reminder:</button>
+                <button mat-menu-item>
+                    <span style="padding-right: 120px;">Later today</span><span style="opacity: 0.5;">8:00 PM</span>
+                </button>
+                <button mat-menu-item>
+                    <span style="padding-right: 125px;">Tomorrow</span><span style="opacity: 0.5;">8:00 AM</span>
+                </button>
+                <button mat-menu-item>
+                    <span style="padding-right: 90px;">Next week</span><span style="opacity: 0.5;">Mon, 8:00 AM</span>
+                </button>
+                <button mat-menu-item>
+                    <span><img src="../../../assets/icon/date&time.svg" alt="" height="15px" width="15px" style="padding-right: 7px;"></span><span>Pick a date & time</span>
+                </button>
+                <button mat-menu-item>
+                    <span><img src="../../../assets/icon/location.svg" alt=""height="15px" width="15px" style="padding-right: 7px;"></span><span>Pick place</span>
+                </button>
+              </mat-menu>
         </div>
 
-        <div class="buttons">
-            <button class="btn-property">
+        <div class="buttons" matTooltip="Collaborator">
+            <button class="btn-property" (click)="openDialog()">
                 <img src="../../../assets/icon/addimg.svg" alt="">
             </button>
         </div>
 
-        <div class="buttons">
-            <button class="btn-property">
+        <div class="buttons"  matTooltip="colour change">
+            <button class="btn-property" [matMenuTriggerFor]="aboveMenu"  mat-icon-button
+            style="border: none; background: transparent;" title="Change color">
                 <img src="../../../assets/icon/colourpallete.svg" alt="">
             </button>
+            <mat-menu class="" #aboveMenu="matMenu" yPosition="above"  mode="Palette">
+                <div class="pop">
+                <div *ngFor='let c of colorarray'>
+                    <button (click)="changecolor(c)" style="border: none; background-color: transparent;">
+                        <mat-icon [ngStyle]="{color:c}">circle</mat-icon>
+                    </button>
+                </div>
+                </div>
+            </mat-menu>
         </div>
 
-        <div class="buttons">
+
+        <div class="buttons"  matTooltip="Add image">
             <button class="btn-property"> 
                 <img src="../../../assets/icon/img.svg" alt="">
             </button>
         </div>
 
-        <div class="buttons" *ngIf="!isArchive">
+        <div class="buttons" *ngIf="!isArchive"  matTooltip="Archive">
             <button class="btn-property" (click)='moveToArchive()'>
                 <img src="../../../assets/icon/archive.svg" alt="">
             </button>
         </div>
 
-        <div class="buttons" *ngIf="isArchive">
-            <button class="buttons btn-property"  matTooltip="Restore">
+        <div class="buttons" *ngIf="isArchive"  matTooltip="Unarchive">
+            <button class="buttons btn-property" (click)='unArchive()'>
                <img class="icons" src="../../../assets/icon/unarchive_black_24dp.svg" alt="">
             </button>
         </div>
 
         <div class="buttons">
-            <button mat-button [matMenuTriggerFor]="menu" class="btn-property">
+            <button mat-button [matMenuTriggerFor]="menu" class="btn-property" matTooltip="More">
                 <img src="../../../assets/icon/more.svg" alt="">
                 <mat-menu #menu="matMenu">
                     <button mat-menu-item (click)="deleteNote()">Delete Note</button>  
@@ -59,7 +88,7 @@
             <img class="icons" src="../../../assets/icon/crossdelete.svg" alt="">
         </button>
 
-        <button class="buttons btn-property"  matTooltip="Restore">
+        <button class="buttons btn-property"  matTooltip="Restore" (click)="restore()">
             <img class="icons" src="../../../assets/icon/deletearrow.svg" alt="">
         </button>
     </div>
