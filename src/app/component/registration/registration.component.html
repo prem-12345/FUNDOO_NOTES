@@ -31,7 +31,6 @@
                     <mat-form-field appearance="outline" class="userName">
                         <mat-label>Username</mat-label>
                         <input matInput placeholder="Username" formControlName="email" type="email" name="email">
-                        <mat-icon matSuffix>@gmail.com</mat-icon>
                         <mat-hint class="userHint" *ngIf="submitted && f.email.errors">
                             <mat-hint *ngIf="f.email.errors.required" class="validation-alert">You can use letters,numbers & periods</mat-hint>
                         </mat-hint>
