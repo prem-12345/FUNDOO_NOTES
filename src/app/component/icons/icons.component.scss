@@ -2,9 +2,10 @@
 .btn-property{
     border: none;
     border-radius: 100%;
-    background-color: white;
+    background-color: transparent;
     padding:4px;
     opacity: 0.5;
+    cursor: pointer;
 }
 
 button:hover{
@@ -16,3 +17,13 @@ button:hover{
     line-height: 0px ;
     height     : 32px ;
 }
+
+.pop{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: white;
+    max-width: 148px;
+    margin-left: 5px;
+}
+
