@@ -7,9 +7,10 @@ import { RegistrationComponent } from './component/registration/registration.com
 import { DashboardComponent } from './component/dashboard/dashboard.component';
 import { GetNotesComponent } from './component/get-notes/get-notes.component';
 import { AuthenticationGuard } from './services/authguardService/authentication.guard'
-import { UpdateNoteComponent } from './component/update-note/update-note.component';
 import { TrashNoteComponent } from './component/trash-note/trash-note.component';
 import { ArchiveNotesComponent } from './component/archive-notes/archive-notes.component';
+import { CollaboratorComponent } from './component/collaborator/collaborator.component';
+
 
 
 
@@ -30,7 +31,7 @@ const routes: Routes = [
     ]
   },
 
-  // { path: 'update-note', component: UpdateNoteComponent }
+  { path: 'collaborator' , component: CollaboratorComponent}
 
 ];
 
