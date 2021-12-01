@@ -17,17 +17,17 @@
         </div>
 
         <div fxFlex="16%" fxLayout="row" fxLayoutAlign="center" fxLayoutGap="10px">
-            <button mat-icon-button class="button-property">
+            <button mat-icon-button class="button-property" matTooltip="Refresh">
                 <mat-icon>refresh</mat-icon>
             </button>
             <button mat-icon-button class="button-property">
-                <mat-icon *ngIf="!openDash" (click)="openDashboard()">view_stream</mat-icon>
-                <mat-icon *ngIf="openDash" (click)="openDashboard()">dashboard</mat-icon>
+                <mat-icon *ngIf="!openDash" (click)="openDashboard()" matTooltip="List Veiw">view_stream</mat-icon>
+                <mat-icon *ngIf="openDash" (click)="openDashboard()" matTooltip="Grid Veiw">dashboard</mat-icon>
             </button>
-            <button mat-icon-button class="button-property">
+            <button mat-icon-button class="button-property" matTooltip="settings" [matMenuTriggerFor]="menu" >
                 <mat-icon>settings</mat-icon>
             </button>
-            <mat-menu #menu="matMenu">
+            <mat-menu #menu="matMenu" >
                 <button mat-menu-item>
                     <p>settings</p>
                 </button>
@@ -39,16 +39,21 @@
                 </button>
                 <button mat-menu-item>
                     <p>Help</p>
+                </button>
+                <button mat-menu-item>
+                    <p>app downloads</p>
+                </button>
+                <button mat-menu-item>
                     <p>keyboard shortcuts</p>
                 </button>
             </mat-menu>
         </div>
 
         <div fxLayout="row" fxLayoutGap="10px">
-            <button mat-icon-button class="button-property">
+            <button mat-icon-button class="button-property" matTooltip="Google Apps">
                 <mat-icon>apps</mat-icon>
             </button>
-            <button mat-icon-button class="button-property">
+            <button mat-icon-button class="button-property" matTooltip="Google Account">
                 <mat-icon (click)="logOut()">account_circle</mat-icon>
             </button>
         </div>
@@ -63,35 +68,35 @@
     <mat-sidenav #sidenav mode="side" [(opened)]="opened" fxLayout="column" fxLayoutAlign="start center"
         fxLayoutGap="20px">
 
-        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px" class="navHover">
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px" class="navHover" routerLinkActive='active'>
             <button mat-icon-button class="btnPosition button-property ">
                 <img src="../../../assets/icon/lightbulb.svg" alt="" routerLink='/dashboard/get-notes'>
             </button>
             <p class="navName" routerLink='/dashboard/get-notes'>Notes</p>
         </div>
 
-        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px" class="navHover">
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px" class="navHover" routerLinkActive='active'>
             <button mat-icon-button class="btnPosition button-property">
                 <img src="../../../assets/icon/download.svg" alt="">
             </button>
             <p class="navName">Reminders</p>
         </div>
 
-        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px" class="navHover">
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px" class="navHover"routerLinkActive='active'>
             <button mat-icon-button class="btnPosition button-property">
                 <img src="../../../assets/icon/label.svg" alt="">
             </button>
             <p class="navName">Edit labels</p>
         </div>
 
-        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px" class="navHover">
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px" class="navHover" routerLinkActive='active'>
             <button mat-icon-button class="btnPosition button-property" routerLink='/dashboard/archive-notes'>
                 <img src="../../../assets/icon/archive.svg" alt="">
             </button>
             <p class="navName" routerLink='/dashboard/archive-notes'>Archive</p>
         </div>
 
-        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px" class="navHover">
+        <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px" class="navHover" routerLinkActive='active'>
             <button mat-icon-button class="btnPosition button-property" routerLink='/dashboard/trash-note'>
                 <img src="../../../assets/icon/delete.svg" alt="">
             </button>
