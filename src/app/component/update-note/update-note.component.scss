@@ -1,36 +1,52 @@
 
 .pin {
     border: none;
-    background-color: white;
+    background-color: transparent;
     position: absolute;
     outline: none;
-    left: 59%;
-    width: 40px;
+    left: 65%;
+    width: 88px;
+    margin-top: 10px;
+    
 }
 
 .title{
    border: none;
    outline: none;
    font-size: 20px;
+   background-color: transparent;
+   margin-top: 10px;
+   margin-left: 20px;
 }
 
 .description{
     border: none;
     outline: none;
     font-size: 15px;
+    background-color: transparent;
+    margin-left: 20px;
 }
+
 
 .icon{
     position: relative;
     right: 4px;
     top: 22px;
+    left: 13px;
+    
 }
 
 .close{
     position: relative;
     left: 87%;
     top: -7px;
-    background-color: white;
+    background-color: transparent;
     border: none;
     font-size: 15px;
 }
+
+::ng-deep.mat-dialog-container{
+    padding:0;
+    overflow: hidden;
+}
+
