@@ -112,6 +112,43 @@ export class NotesService {
     return this.httpService.postService('/notes/deleteForeverNotes', reqPayload, true, httpOptions)
   }
 
+  changecolorservice(reqPayload:any){
+    let httpOptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': this.token
+      })
+
+    }
+    return this.httpService.postService('/notes/changesColorNotes',reqPayload,true,httpOptions)
+  }
+
+
+  addcollaborators(reqPayload:any, id:any){
+    let httpOptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': this.token
+      })
+    }
+    return this.httpService.postService('notes/' + id + '/AddcollaboratorsNotes',reqPayload,true,httpOptions)
+  }
+
+  
+
+
 
 }
+
+
+
+
+
+  
+
+
+
+
+
+
 
