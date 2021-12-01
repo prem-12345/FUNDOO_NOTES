@@ -50,6 +50,9 @@ export class LoginComponent implements OnInit {
       this.userService.login(reqData).subscribe((response: any) => {
         console.log(response)
         localStorage.setItem('token',response.id)
+        localStorage.setItem('firstName',response.firstName)
+        localStorage.setItem('lastName',response.lastName)
+        localStorage.setItem('email',response.email)
 
         this.router.navigate(['dashboard/get-notes'])
 
