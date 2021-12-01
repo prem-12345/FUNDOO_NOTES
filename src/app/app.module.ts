@@ -32,6 +32,10 @@ import { UpdateNoteComponent } from './component/update-note/update-note.compone
 import {MatDialogModule} from '@angular/material/dialog';
 import { TrashNoteComponent } from './component/trash-note/trash-note.component';
 import { ArchiveNotesComponent } from './component/archive-notes/archive-notes.component';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import { CollaboratorComponent } from './component/collaborator/collaborator.component';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+
 
 
 @NgModule({
@@ -48,7 +52,9 @@ import { ArchiveNotesComponent } from './component/archive-notes/archive-notes.c
     GetNotesComponent,
     UpdateNoteComponent,
     TrashNoteComponent,
-    ArchiveNotesComponent
+    ArchiveNotesComponent,
+    CollaboratorComponent,
+   
   ],
   imports: [
     BrowserModule,
@@ -68,7 +74,9 @@ import { ArchiveNotesComponent } from './component/archive-notes/archive-notes.c
     MatMenuModule,
     MatSidenavModule,
     MatListModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTooltipModule,
+    MatDatepickerModule
 
   ],
   providers: [
