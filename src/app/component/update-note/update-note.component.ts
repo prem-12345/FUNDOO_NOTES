@@ -1,4 +1,4 @@
-import { Component, Inject, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Inject, Input, OnInit, Output } from '@angular/core';
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { NotesService } from 'src/app/services/notesService/notes.service';
 
@@ -10,7 +10,11 @@ import { NotesService } from 'src/app/services/notesService/notes.service';
 export class UpdateNoteComponent implements OnInit {
   title: any;
   description: any;
+  // colour: any;
   id: any;
+  message:any;
+
+  @Output() displaytogetallnotes = new EventEmitter<string>();
 
   constructor(
     public dialogRef: MatDialogRef<UpdateNoteComponent>,
@@ -19,6 +23,7 @@ export class UpdateNoteComponent implements OnInit {
     this.title = data.title;
     this.description = data.description;
     this.id = data.id;
+    // this.colour = data.color;
   }
 
   ngOnInit(): void {
@@ -33,7 +38,8 @@ export class UpdateNoteComponent implements OnInit {
     let data = {
       title: this.title,
       description: this.description,
-      noteId: this.id
+      noteId: this.id,
+      // color:this.colour
     }
 
     this.notesService.updatenoteservice(data).subscribe((result: any) => {
@@ -42,6 +48,12 @@ export class UpdateNoteComponent implements OnInit {
       this.description = ''
       this.dialogRef.close(result);
     })
+  }
+
+  receiveMessageFromIcon($event: any){
+    console.log("get message from take-notes via emiter",$event);
+    this.message = $event;
+    this.displaytogetallnotes.emit(this.message);
   }
 
 }
