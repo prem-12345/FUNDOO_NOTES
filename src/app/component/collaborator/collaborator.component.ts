@@ -1,4 +1,4 @@
-import { Component, Inject, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Inject, Input, OnInit, Output } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { NotesService } from 'src/app/services/notesService/notes.service';
 import { UserService } from 'src/app/services/userService/user.service';
@@ -15,21 +15,23 @@ export class CollaboratorComponent implements OnInit {
   lastName = localStorage.getItem('lastName')
   email = localStorage.getItem('email')
 
-  userArray : any = [];
-  collabArray: any;
+  userArray : any ;
+  collabArray: any ;
   values: any;
   dialog: any;
   collaboratorEmail:any;
   user:any;
-  collaboratorlist = [];
+  collaboratorlist: any;
   collaboratordata: any;
+  
   
 
   constructor(private noteService: NotesService, public dialogRef: MatDialogRef<CollaboratorComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any, private userService: UserService) 
     {
-      this.collaboratordata=data
+      this.collaboratordata = data
      }
+ 
 
   ngOnInit(): void {
     this.collaboratorlist=this.collaboratordata.collaborators
@@ -42,11 +44,16 @@ export class CollaboratorComponent implements OnInit {
 
     this.userService.searchListService(data).subscribe((response: any) => {
       console.log(response);
-      this.userArray = response['data'].details
+      this.userArray = response.data.details
       console.log("User array list", this.userArray);
 
     })
 
+  }
+
+  getSelectedEmail(user:any){
+    this.collaboratorEmail= user.email;
+    this.userArray=user;
   }
 
   addCollaborator() {
@@ -72,9 +79,6 @@ export class CollaboratorComponent implements OnInit {
     this.dialogRef.close();
   }
 
-  getSelectedEmail(user:any){
-    this.collaboratorEmail= user.email;
-    this.userArray=user;
-  }
+  
 
 }
