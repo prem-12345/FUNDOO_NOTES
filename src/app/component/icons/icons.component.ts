@@ -24,6 +24,7 @@ export class IconsComponent implements OnInit {
   @Output() iconToDisplay = new EventEmitter<string>();
 
   colorarray = ['#F28B82', '#FBBC05', '#FFF475', '#CCFF90', '#A7FFEB','#CBF0F8','#AECBFA','#D7AEFB','#FDCFE8','#E6C9A8','#E8EAED',];
+  note: any;
 
   
   constructor(private notesService: NotesService, private _snackBar: MatSnackBar, private activatedRoute: ActivatedRoute, public dialog: MatDialog) { }
@@ -173,7 +174,8 @@ export class IconsComponent implements OnInit {
 
   openDialog() {
     const dialogRef = this.dialog.open(CollaboratorComponent, 
-    {width:'600px'
+    {width:'600px',
+    data: this.noteCard
     });
 
     dialogRef.afterClosed().subscribe((result:any)=> {
