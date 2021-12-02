@@ -14,21 +14,26 @@
             <span>
                 {{firstName}} {{lastName}} (owner) <br> {{email}}
             </span>
-        </div>
     </div>
+</div>
 
-    <div *ngFor="let collab of collaboratorlist">
+    <div *ngFor="let collab of collaboratorlist" style="display: flex; align-items: center;">
         <div>
-            <div>
-                <!-- <img class="addcollabimage" src="../../../assets/collabarator/download.svg"> -->
-            </div>
-            <div>
-                <div fxLayout="column" fxLayoutAlign="start center">
-                    <span class="info"> {{collab.firstName}} {{collab.lastName}} </span>
-                    <span> {{collab.email}} </span>
-                </div>
-            </div>
+            <img src="../../../assets/icon/collaborator.svg" alt="" class="image1">
         </div>
+
+        <div class="text1">
+            <span>
+                {{collab.firstName}} {{collab.lastName}} <br> {{collab.email}}
+            </span>
+        </div>
+           
+        <!-- <div>
+            <button class="addColab">  
+                <img src="../../../assets/icon/addCollab.svg" alt="" >
+            </button>
+        </div> -->
+
     </div>
 
     <div class="input-img1" fxLayoutGap="20px">
@@ -36,12 +41,9 @@
         <input type="text" class="input" placeholder="Person and email to share with" fxFlex="200px"
             (keyup)='searchList($event)' [matMenuTriggerFor]="menu" [(ngModel)]="collaboratorEmail">
 
-        <mat-menu #menu="matMenu">
+        <mat-menu #menu="matMenu" >
             <div *ngFor="let user of userArray">
-                <button mat-menu-item (click)='getSelectedEmail(user)'><span>{{user.firstName}} {{user.lastName}}</span>
-                    <span>
-                        <{{user.email}}>
-                    </span> </button>
+                <button mat-menu-item (click)='getSelectedEmail(user)'>{{user.email}}</button>
             </div>
         </mat-menu>
 
@@ -49,6 +51,6 @@
 
     <div fxLayoutGap="40px" class="bottom" fxLayoutAlign="end">
         <button class="button" (click)="closeDialog()">Cancel</button>
-        <button class="button" (click)="addCollaborator()">Save</button>
+        <button class="button" (click)="addCollaborator()" (click)="closeDialog()">Save</button>
     </div>
 </div>
