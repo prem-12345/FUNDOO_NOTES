@@ -36,6 +36,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import { CollaboratorComponent } from './component/collaborator/collaborator.component';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 
+ 
 
 
 @NgModule({
@@ -76,7 +77,8 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
     MatListModule,
     MatDialogModule,
     MatTooltipModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    
 
   ],
   providers: [
