@@ -13,14 +13,12 @@
                </mat-card-header>
                <mat-card-content (click)="openDialog(note)" class="description">{{note.description}}</mat-card-content>
             
-               <!-- <div *ngFor="let collaborator of note.collaborators">
-                <div class="example-button-container">
-                    <button mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon">
-                      <mat-icon>{{}}</mat-icon>
+                <div>
+                    <button class="collab-btn" mat-mini-fab color="accent" aria-label="Example icon button with a plus one icon" *ngFor="let collaborator of note.collaborators" >
+                      <mat-icon>{{collaborator.firstName[0]}}</mat-icon>
                     </button>
-                  </div>
-               </div> -->
-
+                </div>
+            
                <div class="icons">
                    <app-icons [noteCard]= "note" (iconToDisplay)="receiveMessageFromIcon($event)"></app-icons>
                </div>            
