@@ -4,10 +4,10 @@
     <div class="icons" fxLayout="row" fxLayoutGap="15px" *ngIf="!isTrashComponent">
 
         <div class="buttons">
-            <button class="btn-property" matTooltip="Remind me" [matMenuTriggerFor]="menu">
+            <button class="btn-property" matTooltip="Remind me" [matMenuTriggerFor]="menu1">
                 <img src="../../../assets/icon/bellicon.svg" alt="">
             </button>
-            <mat-menu #menu="matMenu">
+            <mat-menu #menu1="matMenu">
                 <button mat-menu-item>Reminder:</button>
                 <button mat-menu-item>
                     <span style="padding-right: 120px;">Later today</span><span style="opacity: 0.5;">8:00 PM</span>
