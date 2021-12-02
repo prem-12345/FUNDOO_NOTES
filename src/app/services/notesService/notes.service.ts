@@ -131,7 +131,7 @@ export class NotesService {
         'Authorization': this.token
       })
     }
-    return this.httpService.postService('notes/' + id + '/AddcollaboratorsNotes',reqPayload,true,httpOptions)
+    return this.httpService.postService('notes/' + id +'/'+ 'AddcollaboratorsNotes',reqPayload,true,httpOptions)
   }
 
   
